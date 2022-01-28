@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Faça seu cálculo abaixo</h1>
+    <p>Faça somente uma operação de cada vez</p>
+    <p>Utilize + para somar</p>
+    <p>Utilize - para subtrair</p>
+    <p>Utilize / para dividir</p>
+    <p>Utilize * para multiplicar</p>
+    <div>
+        <input type="number" name="valor1" id="num1"> 
+    </div>
+    <div>
+        <input type="string" name="operação" id="operation">
+    </div>
+    <div>
+        <input type="number" name="valor2" id="num2">
+    </div>
+    <div>
+        <input type="button" value="Calcular" onclick="Calcular()">
+    </div>
+    <div id="res"></div>
+    <script>
+        var vezes = "*"
+        var soma = "+"
+        var menos = "-"
+        var dividir = "/"
+    </script>
+    <script>
+    function Calcular(){
+        var num1 = window.document.getElementById('num1')
+        var num2 = window.document.getElementById('num2')
+        var operation = window.document.getElementById('operation')
+        var caixa1 = Number(num1.value)
+        var caixa2 = Number(num2.value)
+        var operação = String(operation.value)
+            if (operação === vezes)
+        var n1 = caixa1 * caixa2
+        res.innerHTML = `O resultado é: ${n1}`
+            if (operação === soma)
+        var n1 = caixa1 + caixa2
+        res.innerHTML = `O resultado é: ${n1}`
+            if (operação === menos)
+        var n1 = caixa1 - caixa2
+        res.innerHTML = `O resultado é: ${n1}`
+            if (operação === dividir)
+        var n1 = caixa1 / caixa2
+        res.innerHTML = `O resultado é: ${n1}`
+        }
+    </script>
+</body>
+</html>
